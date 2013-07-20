@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sound Player</title>
+	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<h1>Audio Triggerer</h1>
+<p>use wasd, up down left right and space to trigger sounds</p>
+<div id="119">
+	<h3>W</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="97">
+	<h3>A</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="www" datahello="hello">
+	<h3>S</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="100">
+	<h3>D</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="32">
+	<h3>Space</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="37">
+	<h3>Up</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="38">
+	<h3>Down</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="39">
+	<h3>Left</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<div id="40">
+	<h3>Right</h3>
+	<audio controls>
+		<source src="" type="audio/mpeg">
+	</audio>
+	<br/>
+	<input type="file">
+</div>
+<script>
+$(document).ready(function(){
+	$(document).keypress(function(event){
+		$("#"+event.which+" audio")[0].play();
+		console.log($("#"+event.which+" audio")[0]);
+	});
+	$("input").change(function(event){
+		$("#"+$(this).parent().id()+" audio source").attr('src',$(this).val());
+	});
+})
+</script>
+</body>
+</html>
